@@ -1,0 +1,45 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %>
+    <div class="d-flex flex-column bodyContainer">
+        <div class="flex column main__centerColumn_all"> 
+            <div class="flex column formContainer_all mx-4">
+                <form class="needs-validation flex column" action="/createProduct" method="POST" novalidate>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Image</span>
+                            <input class="form-control" value="" type="text" maxlength="700" 
+                            name="productImg" id="productImg" placeholder="productImg(img)" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Name</span>
+                            <input class="form-control" value="" type="text" maxlength="36" 
+                            name="productName" id="productName" placeholder="Atomic Habits" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Description</span>
+                            <input class="form-control" value="" type="text" maxlength="600" 
+                            name="productDescription" id="productDescription" placeholder="What a great book" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Price $</span>
+                            <input class="form-control" value="" type="text" maxlength="14" 
+                            name="productPrice" id="productPrice" placeholder="12.72" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Category</span>
+                            <select class="form-select" aria-label="Default select example" id="productCategory" name="productCategory">
+                                <% for(category of categories) { %> 
+                                    <option value="<%= category._id %>"><%= category.categoryName %></option>
+                                <% } %> 
+                            </select>
+                        </div>
+                        <button class="btn btn-primary mt-3 postButton">Create Product</button>
+                        <a class="btn btn-warning mt-3 ms-2 loginButton" href="/products">All Products</a> 
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('../partials/validator') %>
+</html>

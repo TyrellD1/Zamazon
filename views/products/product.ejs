@@ -1,0 +1,30 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %>
+    <div class="d-flex flex-column bodyContainer">
+        <div class="d-flex flex-row productContainer">
+            <div class="d-flex flex-column mx-4">
+                <img class="productContainerImg" src="<%= product.productImgs %> " alt="">
+            </div>
+            <div class="d-flex flex-column productInfoContainer">
+                <h2 class="productContainerName text-break"><%= product.productName %> </h2>
+                <h3 class="productContainerCategory text-break"><%= product.productCategory.categoryName %> </h3>
+                <p class="productContainerDescription text-break"><%= product.productDescription %> </p>
+            </div>
+            <div class="d-flex flex-column productContainer__addToCartContainer_all mx-4">
+                <h2 class="productContainerPrice">$<%= product.productPrice %> </h2>
+                <% if(currentUser) { %> 
+                <form action="/addToCart/<%= product._id %>?_method=PUT" method="POST">
+                    <button class="addToCartButton">Add to Cart</button>
+                </form>
+                <a class="productUpdateButton" href="/product/<%= product._id %>/update">Update Product</a>
+                <form action="/product/<%= product._id %>/delete?_method=DELETE" method="POST">
+                    <button class="productDeleteButton">Delete Product</button>
+                </form>
+                <% } %> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<div class="d-flex flex-row justify-content-center categoryBar_all">
+    <% for(category of categories) { %>
+        <a class="categoryBar__link_all mx-1" href="/category/<%= category._id %>"><%= category.categoryName %> </a>
+    <% } %> 
+</div>

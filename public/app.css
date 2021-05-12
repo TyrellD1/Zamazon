@@ -1,0 +1,418 @@
+body {
+    background-color: rgb(212, 212, 212);
+}
+
+/*  */
+/* General */
+/*  */
+
+.grid {
+    display: grid;
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+.dropdown, .dropdown-menu, .nav-list {
+    list-style-type: none;
+}
+
+.updateButton {
+    min-width: 8vw;
+    max-width: 10vw;
+}
+
+.bodyContainer {
+    padding: 1vw 0;
+}
+
+/* Flash Message Container Width */
+.message {
+    width: 60vw;
+}
+
+/*  */
+/* General */
+/*  */
+
+/*  */
+/* Navbar */
+/*  */
+
+.cartButton {
+    background-color: transparent;
+    border: solid 0 transparent;
+
+    font-size: 2vw;
+    color: rgb(43, 141, 148);
+}
+
+/* Cart Dropdown */
+
+.shoppingCartContainer {
+    position: absolute;
+
+    top: 56 px;
+    right: 10px;
+
+    background-color: rgb(240, 238, 238);
+
+    display: none;
+
+    width: 20vw;
+
+    max-height: 59vh;
+
+    overflow-y: scroll;
+    
+    z-index: 1000;
+
+    padding: 1vh;
+}
+
+.shoppingCartContainer__productImg {
+    width: 20%;
+    max-height: 10vh;
+}
+
+.shoppingCartContainer__productName {
+    font-size: 1.4vw;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    word-wrap: normal;
+    
+}
+
+.shoppingCartContainer__productPrice {
+    color: rgb(236, 181, 0);
+}
+
+.shoppingCartContainer__cartTotal {
+    font-size: 1.4vw;
+}
+
+.shoppingCartContainerVisible {
+    display: flex;
+}
+
+.trashButton {
+    background-color: transparent;
+    border: solid 0 transparent;
+
+    font-size: 1.1vw;
+    color: rgb(185, 4, 4);
+}
+
+.trashButton:hover {
+    text-decoration: underline;
+}
+
+/* Cart Dropdown */
+
+/* Category Bar */
+
+.categoryBar_all {
+    height: 5vh;
+    background-color: rgb(37, 37, 37);
+
+    align-items: center;
+}
+
+.categoryBar__link_all {
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+
+    padding: .03rem .4rem;
+    border: solid 1px transparent;
+}
+
+.categoryBar__link_all:hover {
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+
+    border: solid 1px rgb(255, 255, 255);
+}
+
+/* Category Bar */
+
+/*  */
+/* Navbar */
+/*  */  
+
+/*  */
+/* Homepage */
+/*  */
+
+.homeBody {
+    padding-right: .5vw;
+    padding-left: .5vw;
+}
+
+.bodyContainerHome {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/MDkzY2E0NmMt/MDkzY2E0NmMt-MWEzMWY1ZWUt-w1500._CB669611386_.jpg);
+}
+
+.backgroundLinkContainer {
+    height: 233px;
+    width: 812px;
+
+    position: absolute;
+
+    z-index: 1000;
+
+    left: 350px;
+    top: 96px;
+
+    cursor: pointer;
+}
+
+.topRowContainer_all {
+    margin-top: 30vh;
+
+    grid-template-columns:repeat(4, 1fr);
+
+    grid-auto-rows: minmax(200px, 400px);
+
+    overflow-y: hidden;
+
+    grid-gap: 1rem;
+}
+
+.topRowContainer__container1_all {
+    background-color: rgb(255, 255, 255);
+
+    padding: 1.5vh 1vw;
+
+    cursor: pointer;
+}
+
+.topRowContainer__container1_all h2 {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.topRowContainer__container1_all img {
+    height: 295px;
+    width: 100%;
+
+    margin-top: 2px;
+}
+
+/*  */
+/* Homepage */
+/*  */
+
+/*  */
+/* Category Page */
+/*  */
+
+/* UpdateCategory */
+.updateContainer {
+    width: 95vw;
+
+    justify-content: center;
+}
+
+/* Update Category Form Container */
+.formContainer_all {
+    min-width: 50vw;
+    max-width: 60vw;
+}
+/* UpdateCategory */
+
+.categoryContainer {
+    width: 40vw;
+    height: 70vh;
+
+    padding-bottom: 1vh;
+
+    overflow-y: hidden;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.categoryContainer__img {
+    max-width: 100%;
+    max-height: 70%;
+}
+
+.categoryContainer__title {
+    color: rgb(34, 34, 34);
+    font-size: 1.7vw;
+
+    text-decoration: none;
+}
+
+.categoryContainer__title:hover {
+    color: rgb(34, 34, 34);
+
+    text-decoration: underline;
+}
+
+.categoryContainer__description {
+    color: rgb(34, 34, 34);
+    font-size: 1vw;
+}
+
+/* Category Page Products Start */
+.categoryProductContainer {
+    width: 40vw;
+
+    padding-bottom: 1vh;
+
+    margin-top: 20px;
+
+    overflow-y: hidden;
+
+    background-color: rgb(255, 255, 255);
+
+    cursor: pointer;
+}
+
+.categoryProductContainer__img {
+    max-height: 700px;
+}
+
+/*  */
+/* Category Page */
+/*  */
+
+/*  */
+/* Product Page */
+/*  */
+
+.productContainer {
+    margin-top: 20vh;
+}
+
+.productContainerImg {
+    min-width: 20vw;
+    max-width: 45vw;
+
+    max-height: 50vh;
+}
+
+.productInfoContainer {
+    max-width: 40vw;
+}
+
+.productContainerName {
+    margin-bottom: 0;
+}
+
+.productContainerCategory {
+    font-size: 1.7vw;
+
+    font-weight: 400;
+
+    margin-top: 0;
+}
+
+.productContainerPrice {
+    font-size: 1.4vw;
+}
+
+/* Add to Cart and Update Product Container Start */
+.productContainer__addToCartContainer_all {
+    position: fixed;
+
+    right: 0;
+
+    width: 300px;
+
+    border: solid 5px rgb(139, 139, 139);
+    border-radius: 5px;
+
+    padding: 1vw;
+}
+
+
+.addToCartButton {
+
+    width: 100%;
+
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(168, 250, 129), rgb(57, 163, 62));
+
+    border-radius: 2.5px;
+
+    border: solid 1px black;
+}
+
+.addToCartButton:hover {
+    background-image: linear-gradient(rgb(150, 245, 106), rgb(44, 167, 50));
+}
+
+.productUpdateButton {
+
+    width: 100%;
+
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(250, 222, 129), rgb(163, 152, 57));
+
+    border-radius: 2.5px;
+
+    border: solid 1px black;
+
+    text-align: center;
+
+    text-decoration: none;
+}
+
+.productUpdateButton:hover {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(245, 220, 106), rgb(167, 134, 44));
+}
+
+.productDeleteButton {
+    width: 100%;
+
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(250, 129, 129), rgb(163, 57, 57));
+
+    border-radius: 2.5px;
+
+    border: solid 1px black;
+    margin-top: 5px;
+
+    text-align: center;
+
+    text-decoration: none;
+}
+
+.productDeleteButton:hover {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(245, 106, 106), rgb(167, 44, 44));
+}
+/* Add to Cart and Update Product Container End */
+
+/*  */
+/* Product Page */
+/*  */
+
+/*  */
+/* All Products Page */
+/*  */
+
+.allProductsTitle {
+    height: 10vh;
+    color: black;
+
+    background-color: white;
+
+    font-size: 2.5vw;
+    font-weight: 600;
+
+    text-align: center;
+
+    justify-content: center;
+}
+
+/*  */
+/* All Products Page */
+/*  */

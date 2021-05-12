@@ -1,0 +1,29 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %>
+    <div class="d-flex flex-column bodyContainer">
+        <div class="flex column main__centerColumn_all"> 
+            <div class="flex column formContainer_all mx-4">
+                <form class="needs-validation flex column" action="/newCategory" method="POST" novalidate>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Image</span>
+                            <input class="form-control" type="text" maxlength="700" name="categoryImg" id="categoryImg" placeholder="categoryImg(img)" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Name</span>
+                            <input class="form-control" type="text" maxlength="36" name="categoryName" id="categoryName" placeholder="Books" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Description</span>
+                            <input class="form-control" type="text" maxlength="150" name="categoryDescription" id="categoryDescription" placeholder="Books" required>
+                        </div>
+                        <button class="btn btn-primary mt-3 postButton">Create Category</button>
+                        <a class="btn btn-warning mt-3 ms-2 loginButton" href="/categories">All Categories</a> 
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('../partials/validator') %>
+</html>

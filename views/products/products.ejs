@@ -1,0 +1,29 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %>
+    <div class="d-flex flex-column">
+        <div class="allProductsTitle d-flex flex-column">
+          All Products
+        </div>
+        <% for(category of categories) { %>
+          <hr class="mt-5">
+            <h2 class="mx-auto"><%= category.categoryName %> </h2>
+          <hr>
+          <% for(product of category.products) { %>
+            <div id="product<%= product._id %>" class="d-flex flex-column categoryProductContainer mx-auto">
+              <img class="categoryProductContainer__img" 
+              src="<%= product.productImgs %>" alt="">
+              <h2 class="categoryProductContainer__title mx-4 mt-2"><%= product.productName %></h2>
+              <p class="categoryProductContainer__description mx-4"><%= product.productDescription %></p>
+            </div>
+            <script>
+                document.querySelector('#product<%= product._id %>').addEventListener('click', () => {
+                    window.location.href = '/product/<%= product._id %>'
+                })
+            </script>
+          <% } %> 
+        <% } %> 
+    </div>
+</body>
+</html>

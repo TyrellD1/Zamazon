@@ -1,0 +1,37 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %>
+    <div class="d-flex flex-column bodyContainer">
+        <div class="d-flex flex-column categoryContainer mx-auto mt-2">
+            <img class="categoryContainer__img" 
+            src="<%= category.categoryImg %> " alt="">
+            <h2 class="categoryContainer__title mx-4 mt-2 text-break"><%= category.categoryName %> </h2>
+            <p class="categoryContainer__description mx-4 text-break"><%= category.categoryDescription %> </p>
+            <div class="d-flex flex-row mx-4">
+                <a class="btn btn-warning my-auto me-2" href="/category/<%= category._id %>/update">Update Category</a>
+                <a class="btn btn-primary my-auto me-2" href="/categories">All Categories</a>
+                <form class="my-auto" action="/category/<%= category._id %>/delete">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <h2 class="mx-auto fs-1">Products</h2>
+        <hr>
+        <% for(product of category.products) { %> 
+            <div id="product<%= product._id %>" class="d-flex flex-column categoryProductContainer mx-auto">
+                <img class="categoryProductContainer__img" 
+                src="<%= product.productImgs %>" alt="">
+                <h2 class="categoryProductContainer__title mx-4 mt-2"><%= product.productName %></h2>
+                <p class="categoryProductContainer__description mx-4"><%= product.productDescription %></p>
+            </div>
+            <script>
+                document.querySelector('#product<%= product._id %>').addEventListener('click', () => {
+                    window.location.href = '/product/<%= product._id %>'
+                })
+            </script>
+        <% } %> 
+    </div>
+</body>
+</html>

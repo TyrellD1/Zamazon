@@ -1,0 +1,53 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %> 
+    <div class="homeBody">
+        <div class="d-flex flex-column bodyContainer bodyContainerHome">
+            <div id="backgroundLinkContainer" class="backgroundLinkContainer"></div>
+            <div class="grid topRowContainer_all mx-3 justify-content-center">
+                <div id="container1" class="d-flex flex-column topRowContainer__container1_all">
+                    <h2>Hair removal best sellers</h2>
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2021/img/Consumables/XCM_Manual_1306636_1567303_US_us_gw_pc_single_category_card_2x_us_en_3662610_379x304_1X_en_US._SY304_CB660640318_.jpg" alt="">
+                </div>
+                <div id="container2" class="d-flex flex-column topRowContainer__container1_all">
+                    <h2>Facemasks under $10</h2>
+                    <img src="https://images.unsplash.com/photo-1586942593822-268ff3828458?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZSUyMG1hc2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div id="container3" class="d-flex flex-column topRowContainer__container1_all">
+                    <h2>Premium Sound and comfort</h2>
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/ZDNhNDdkYjQt/ZDNhNDdkYjQt-MmU5M2FhMWEt-w379._SY304_CB669391928_.jpg" alt="">
+                </div>
+                <div id="container4" class="d-flex flex-column topRowContainer__container1_all">
+                    <h2>Premium Fragrance</h2>
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2021/img/Consumables/XCM_CUTTLE_1305322_1561943_US_3654130_379x304_1X_en_US._SY304_CB662317373_.jpg" alt="">
+                </div>
+            </div>
+            <script>
+                let container1, container2, container3, container4, backgroundLink;
+                container1 = document.querySelector('#container1')
+                container2 = document.querySelector('#container2')
+                container3 = document.querySelector('#container3')
+                container4 = document.querySelector('#container4')
+                backgroundLink = document.querySelector('#backgroundLinkContainer')
+                
+                container1.addEventListener('click', () => {
+                    window.location.href = '/category/609b519e9947672a642a1cd3'
+                })
+                container2.addEventListener('click', () => {
+                    window.location.href = '/product/609be07f9947672a642a1cd5'
+                })
+                container3.addEventListener('click', () => {
+                    window.location.href = '/product/609be0f09947672a642a1cd8'
+                })
+                container4.addEventListener('click', () => {
+                    window.location.href = '/category/609be1479947672a642a1cda'
+                })
+                backgroundLink.addEventListener('click', () => {
+                    window.location.href = '/product/609be6d89947672a642a1cdb'
+                })
+            </script>
+        </div>
+    </div>
+</body> 
+</html>

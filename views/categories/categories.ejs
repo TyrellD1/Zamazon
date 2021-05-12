@@ -1,0 +1,16 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/nav') %> 
+    <%- include('../partials/categoryBar') %>
+    <div class="d-flex flex-column bodyContainer">
+        <% for(category of categories) { %> 
+        <div class="d-flex flex-column categoryContainer mx-auto mt-2">
+            <img class="categoryContainer__img" 
+            src="<%= category.categoryImg %> " alt="">
+            <a href="/category/<%= category._id %> " class="categoryContainer__title mx-4 mt-2 text-break"><%= category.categoryName %> </a>
+            <p class="categoryContainer__description mx-4 text-break"><%= category.categoryDescription %> </p>
+        </div>
+        <% } %> 
+    </div>
+</body>
+</html>
